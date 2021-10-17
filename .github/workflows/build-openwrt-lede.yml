@@ -130,7 +130,7 @@ jobs:
       with:
         name: openwrt_armvirt_64_${{ env.FILE_DATE }}
         path: ${{ env.TMPFILEPATH }}
-        #retention-days: ${{ env.RECENT_LASTEST }}
+        retention-days: ${{ env.RECENT_LASTEST }}
         if-no-files-found: ignore
 
     - name: Build OpenWrt firmware
