@@ -28,7 +28,7 @@ env:
   UPLOAD_WETRANSFER: false
   DELETE_RELEASE: true
   DELETE_ARTIFACTS: true
-  #RECENT_LASTEST: 3
+  RECENT_LASTEST: 0
   TZ: Asia/Shanghai
 
 jobs:
@@ -112,7 +112,7 @@ jobs:
       with:
         name: openwrt_bin_armvirt_64_${{ env.FILE_DATE }}
         path: openwrt/bin
-        #retention-days: ${{ env.RECENT_LASTEST }}
+        retention-days: ${{ env.RECENT_LASTEST }}
         if-no-files-found: ignore
 
     - name: Organize armvirt files
